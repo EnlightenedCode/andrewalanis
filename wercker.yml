@@ -37,6 +37,6 @@ deploy:
         name: Push to dokku
         code: |
           echo hello
-          ssh -vvv dokku@159.203.93.235:andrewalanis
+          ssh -vvv dokku@159.203.93.235
           git remote add dokku dokku@$SERVER_HOSTNAME:andrewalanis
           git push dokku master
