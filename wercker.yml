@@ -20,7 +20,7 @@ deploy:
     - add-to-known_hosts:
         hostname: $SERVER_HOSTNAME
     - add-ssh-key:
-        keyname: DOKKU
+        keyname: DOKKU_PRIVATE
     - script:
         name: Initialize new repository
         code: |
