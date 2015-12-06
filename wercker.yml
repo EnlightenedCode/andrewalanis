@@ -37,5 +37,5 @@ deploy:
         name: Push to dokku
         code: |
           echo hello
-          git remote add dokku dokku@$SERVER_HOSTNAME:andrewalanis
+          git remote add dokku dokku@$SERVER_HOSTNAME:andrewresume
           git push dokku master -f
