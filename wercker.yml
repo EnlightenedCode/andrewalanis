@@ -19,7 +19,6 @@ deploy:
   steps:
     - add-to-known_hosts:
         hostname: $SERVER_HOSTNAME
-        fingerprint: 70:10:2f:e2:35:b0:58:ef:c3:1c:19:55:b1:f2:4a:f2
     - add-ssh-key:
         keyname: DOKKU
     - script:
@@ -38,7 +37,5 @@ deploy:
         name: Push to dokku
         code: |
           echo hello
-          ssh -vvv dokku@159.203.93.235
           git remote add dokku dokku@$SERVER_HOSTNAME:andrewalanis
-          ssh-keyscan -t rsa github.com 2>&1 >> /root/.ssh/known_hosts
           git push dokku master -f
