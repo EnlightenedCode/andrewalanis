@@ -26,10 +26,6 @@ deploy:
         code: |
           rm -rf .git
           git init
-          git config --global user.name "wercker"
-          git config --global user.email "andrew4336@gmail.com"
-          git remote add dokku dokku@$SERVER_HOSTNAME:andrewalanis
-          ssh-keyscan -t rsa github.com 2>&1 >> /root/.ssh/known_hosts
     - script:
         name: Add everything to the repository
         code: |
@@ -38,4 +34,8 @@ deploy:
     - script:
         name: Push to dokku
         code: |
+          git config --global user.name "wercker"
+          git config --global user.email "andrew4336@gmail.com"
+          git remote add dokku dokku@$SERVER_HOSTNAME:andrewalanis
+          ssh-keyscan -t rsa github.com 2>&1 >> /root/.ssh/known_hosts
           git push dokku master -f
