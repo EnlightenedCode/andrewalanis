@@ -6,7 +6,7 @@ app.use(app.router);
 app.use(express.static(__dirname + "/public"));
 
 app.get("/", function(req, res){
-    res.send("Hello, World from Andrew! Hello test 7777 again");
+    res.send("Hello, World from Andrew! Hello test 77877 again");
 });
 
 app.listen(PORT);
