@@ -16,7 +16,7 @@ app.get("/", function(req, res){
         res.setHeader('WWW-Authenticate', 'Basic realm="example"');
         res.end('Access denied')
     } else {
-        res.send("Hello, You are in!");
+        res.send("Hello, This is a test!");
         res.end('Access granted');
 
     }
